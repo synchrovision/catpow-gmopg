@@ -1,0 +1,12 @@
+@import 'admin_style_config.scss';
+
+.wp-block-catpow-gmopg{
+	@include bnd((pd:20));
+	&__button{
+		@include bnd((d:b,p:r,w:300,mg:0 a,pd:10));
+		@include bg((c:m));
+		@include bdr((r:5));
+		@include txt((a:c,p:18,h:1em,w:b,c:i));
+		@include shd((b:1));
+	}
+}

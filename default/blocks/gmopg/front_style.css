@@ -1,0 +1,20 @@
+@charset "utf-8";
+.wp-block-catpow-gmopg {
+  padding: 20px;
+}
+.wp-block-catpow-gmopg__button {
+  display: block;
+  position: relative;
+  width: 300px;
+  margin: 0px auto;
+  padding: 10px;
+  background-color: #007cba;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1em;
+  font-weight: 700;
+  color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+/*# sourceMappingURL=./front_style.css.map */

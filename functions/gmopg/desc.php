@@ -1,0 +1,1 @@
+クレジットカード決済サービスGMO Payment Gateway連携機能を追加します。
