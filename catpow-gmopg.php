@@ -13,4 +13,4 @@ Text Domain: catpow
 Domain Path: /languages
 */
 
-add_filter('catpow_extensions',function($extensions){$extensions[]='catpow-gmopg';return $extensions;});
+add_filter('catpow_extensions',function($extensions){$extensions[]=basename(__DIR__);return $extensions;});
