@@ -1,5 +1,5 @@
 <?php
-use Catpow\gmopg\Agent;
+use Catpow\GMOPG\Agent;
 if($is_preview){$url='';}
 else{
 	$agent=Agent::getInstance();
