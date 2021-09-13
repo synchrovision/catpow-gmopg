@@ -7,14 +7,20 @@
 		const {items,classes}=attributes;
 		const primaryClass='wp-block-catpow-gmopg';
         
-		const selectiveClasses=useMemo(()=>{
-			return [
-				{input:'text',label:'注文ID',key:'OrderID'},
-				{input:'text',label:'価格',key:'Amount'},
-				{input:'text',label:'取引詳細',key:'Detail'},
-				{input:'text',label:'決済方法',key:'PayMethods'},
-			];
-		},[]);
+		const sendSomeMail=attributes.GuideMailSendFlag||attributes.ThanksMailSendFlag;
+		const selectiveClasses=[
+			{input:'text',label:'注文ID',key:'OrderID'},
+			{input:'text',label:'価格',key:'Amount'},
+			{input:'text',label:'取引詳細',key:'Detail'},
+			{input:'bool',label:'決済URL案内メール送信',key:'GuideMailSendFlag'},
+			{input:'bool',label:'購入ありがとうメール送信',key:'ThanksMailSendFlag'},
+			{input:'text',label:'メール送信先アドレス',key:'SendMailAddress',cond:sendSomeMail},
+			{input:'text',label:'顧客名',key:'CustomerName',cond:sendSomeMail},
+			{input:'text',label:'メール送信元',key:'FromSendMailAddress',cond:sendSomeMail},
+			{input:'text',label:'メール送信元名',key:'FromSendMailName',cond:sendSomeMail},
+			{input:'text',label:'BCC送信先',key:'BccSendMailAddress',cond:sendSomeMail},
+			{input:'text',label:'テンプレートNo',key:'TemplateNo',cond:sendSomeMail}
+		];
 		
         return (
 			<Fragment>

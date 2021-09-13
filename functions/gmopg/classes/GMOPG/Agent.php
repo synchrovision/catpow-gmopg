@@ -31,7 +31,7 @@ class Agent{
 	public function post($ep,$param){
 		return json_decode($this->client->post($ep,$param)->getBody()->getContents(),1);
 	}
-	public function get_link_plus_checkout_url($transaction){
+	public function get_link_plus_checkout_url($transaction,$geturlparam=[]){
 		if(empty($transaction['Amount'])){return new \WP_error('fail','require Amount');}
 		if(empty($transaction['OrderID'])){return new \WP_error('fail','require OrderID');}
 		$order_id=$transaction['OrderID'];
@@ -42,10 +42,10 @@ class Agent{
 			return $this->cache[$order_id]['LinkUrl'];
 		}
 		$param=[
-			'geturlparam'=>[
+			'geturlparam'=>array_merge([
 				'ShopID'=>$this->config['ShopID'],
 				'ShopPass'=>$this->config['ShopPass'],
-			],
+			],$geturlparam),
 			'configid'=>$this->config['configid'],
 			'transaction'=>$transaction
 		];

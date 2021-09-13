@@ -6,9 +6,19 @@ else{
 	$transaction=[
 		'OrderID'=>do_shortcode($attr['OrderID']),
 		'Amount'=>do_shortcode($attr['Amount']),
-		'Detail'=>do_shortcode($attr['Detail'])
+		'Detail'=>do_shortcode($attr['Detail']),
 	];
-	$url=$agent->get_link_plus_checkout_url($transaction);
+	$geturlparam=[
+		'GuideMailSendFlag'=>$attr['GuideMailSendFlag']?1:0,
+		'ThanksMailSendFlag'=>$attr['ThanksMailSendFlag']?1:0,
+		'BccSendMailAddress'=>do_shortcode($attr['BccSendMailAddress']),
+		'FromSendMailAddress'=>do_shortcode($attr['FromSendMailAddress']),
+		'FromSendMailName'=>do_shortcode($attr['FromSendMailName']),
+		'SendMailAddress'=>do_shortcode($attr['SendMailAddress']),
+		'CustomerName'=>do_shortcode($attr['CustomerName']),
+		'TemplateNo'=>do_shortcode($attr['TemplateNo'])
+	];
+	$url=$agent->get_link_plus_checkout_url($transaction,$geturlparam);
 	if(is_wp_error($url)){
 		echo $url->get_error_message();
 		return;
