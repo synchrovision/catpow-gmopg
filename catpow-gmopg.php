@@ -3,7 +3,7 @@
 Plugin Name: Catpow GMO Payment Gateway
 Description: Catpow
 Author: synchro_vision
-Version: 1.0.1-alpha
+Version: 1.0.2-alpha
 Author URI: https://catpow.info
 Text Domain: catpow
 Domain Path: /languages
