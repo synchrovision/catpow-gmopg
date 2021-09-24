@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Catpow GMO Payment Gateway
-Description: Catpow
+Description: ブロックエディタにGMO決済ボタンブロックを追加します
 Author: synchro_vision
 Version: 1.0.2-alpha
 Author URI: https://catpow.info
