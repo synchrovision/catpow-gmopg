@@ -1,17 +1,17 @@
 @charset "utf-8";
 .wp-block-catpow-gmopg {
-  padding: 20px;
+  padding: 1.25rem;
 }
 .wp-block-catpow-gmopg__button {
   display: block;
   position: relative;
-  width: 300px;
-  margin: 0px auto;
-  padding: 10px;
+  width: 18.75rem;
+  margin: 0rem auto;
+  padding: 0.625rem;
   background-color: #007cba;
-  border-radius: 5px;
+  border-radius: 0.3125rem;
   text-align: center;
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 1em;
   font-weight: 700;
   color: #fff;
